@@ -10,6 +10,7 @@
   "author": "Durran Jordan <durran@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "babel-register": "^6.16.3",
     "hadron-app-registry": "^3.1.0",
     "hadron-package-manager": "^0.2.0",
     "react": "^15.3.2",
