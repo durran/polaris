@@ -1,0 +1,16 @@
+npm-debug.log
+build/
+dist/
+node_modules
+.DS_Store
+.idea/
+*.iml
+.cache*
+src/app/templates.js
+src/connect/static-connect.html
+report.json
+.user-data/
+.compiled-sources/
+src/app/compiled-less/
+expansions.yml
+.nvmrc
