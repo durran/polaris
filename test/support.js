@@ -1,5 +1,7 @@
 require('babel-register')({ extensions: ['.jsx'], ignore: false });
 
+const path = require('path');
+const yaml = require('node-yaml');
 const jsdom = require('jsdom').jsdom;
 const exposedProperties = ['window', 'navigator', 'document'];
 
@@ -16,3 +18,6 @@ Object.keys(document.defaultView).forEach((property) => {
 global.navigator = {
   userAgent: 'node.js'
 };
+
+const locale = path.join('..', 'src', 'renderer', 'locales', 'en-uk.yml');
+global.t = yaml.readSync(locale);

@@ -1,20 +1,11 @@
 const React = require('react');
-const PolarisStore = require('../store/polaris-store');
+const PolarisToolbar = require('./polaris-toolbar');
+const PolarisContent = require('./polaris-content');
 
 /**
  * The polaris constant.
  */
 const POLARIS = 'polaris';
-
-/**
- * The toolbar constant.
- */
-const TOOLBAR = `${POLARIS}-toolbar`;
-
-/**
- * The content constant.
- */
-const CONTENT = `${POLARIS}-content`;
 
 /**
  * The core Polaris application component.
@@ -24,15 +15,19 @@ class Polaris extends React.Component {
   /**
    * Render the polaris component.
    *
+   * @todo:
+   *   - Show home dashboard if exists.
+   *   - Show dashboard list if dashboards exist.
+   *   - Show visualisation list if visualisations exist.
+   *   - Show zero state with shortcut to create visualisation.
+   *
    * @returns {React.Component} The core component.
    */
   render() {
     return (
       <div id={POLARIS} className={POLARIS}>
-        <div id={TOOLBAR} className={TOOLBAR}>
-        </div>
-        <div id={CONTENT} className={CONTENT}>
-        </div>
+        <PolarisToolbar />
+        <PolarisContent />
       </div>
     );
   }
