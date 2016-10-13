@@ -50,7 +50,7 @@ class Application {
    * Open the main application window.
    */
   openWindow() {
-    this.mainWindow = new BrowserWindow({});
+    this.mainWindow = new BrowserWindow({ width: 1000, height: 700 });
     this.mainWindow.loadURL(ENTRY_POINT);
     this.mainWindow.on(CLOSED, this.removeWindow.bind(this));
   }
