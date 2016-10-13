@@ -1,4 +1,5 @@
 const React = require('react');
+const PolarisStore = require('../store/polaris-store');
 
 /**
  * The polaris constant.

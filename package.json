@@ -5,12 +5,13 @@
   "repository": "",
   "scripts": {
     "start": "electron ./src/main/index.js",
-    "test": "mocha --recursive"
+    "test": "mocha --recursive --compilers js:babel-register"
   },
   "author": "Durran Jordan <durran@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
     "babel-register": "^6.16.3",
+    "d3": "^4.2.7",
     "hadron-app-registry": "^3.1.0",
     "hadron-package-manager": "^0.2.0",
     "react": "^15.3.2",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "electron": "^1.4.3",
-    "mocha": "^3.1.2"
+    "enzyme": "^2.4.1",
+    "mocha": "^3.1.2",
+    "react-addons-test-utils": "^15.3.2"
   }
 }
