@@ -23,6 +23,14 @@ class Polaris extends React.Component {
   }
 }
 
+/**
+ * The component display name.
+ */
 Polaris.displayName = 'Polaris';
+
+/**
+ * The selector to use to find this component in the DOM.
+ */
+Polaris.selector = "div[data-test-id='polaris']";
 
 module.exports = Polaris;
