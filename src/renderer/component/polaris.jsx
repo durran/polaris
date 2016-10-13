@@ -18,7 +18,7 @@ class Polaris extends React.Component {
    */
   render() {
     return (
-      <div data-test-id={POLARIS} className={POLARIS}></div>
+      <div id={POLARIS} className={POLARIS}></div>
     );
   }
 }
@@ -27,10 +27,5 @@ class Polaris extends React.Component {
  * The component display name.
  */
 Polaris.displayName = 'Polaris';
-
-/**
- * The selector to use to find this component in the DOM.
- */
-Polaris.selector = "div[data-test-id='polaris']";
 
 module.exports = Polaris;

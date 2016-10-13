@@ -10,7 +10,7 @@ chai.use(chaiEnzyme());
 
 describe('<Polaris />', () => {
   const wrapper = mount(<Polaris />);
-  const component = wrapper.find(Polaris.selector);
+  const component = wrapper.find('#polaris');
 
   it('includes the BEM class name', () => {
     expect(component.hasClass('polaris')).to.equal(true);
