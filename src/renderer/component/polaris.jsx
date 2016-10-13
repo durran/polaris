@@ -7,6 +7,16 @@ const PolarisStore = require('../store/polaris-store');
 const POLARIS = 'polaris';
 
 /**
+ * The toolbar constant.
+ */
+const TOOLBAR = `${POLARIS}-toolbar`;
+
+/**
+ * The content constant.
+ */
+const CONTENT = `${POLARIS}-content`;
+
+/**
  * The core Polaris application component.
  */
 class Polaris extends React.Component {
@@ -18,7 +28,12 @@ class Polaris extends React.Component {
    */
   render() {
     return (
-      <div id={POLARIS} className={POLARIS}></div>
+      <div id={POLARIS} className={POLARIS}>
+        <div id={TOOLBAR} className={TOOLBAR}>
+        </div>
+        <div id={CONTENT} className={CONTENT}>
+        </div>
+      </div>
     );
   }
 }
