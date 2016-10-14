@@ -10,3 +10,12 @@ TODO:
   - Schema anomalies
   - Schema view
   - Unused indexes
+
+- Visualisation:
+  - Data source:
+    - Collection data
+      - Aggregation
+    - Index information
+    - Schema information
+    - Command execution
+  - Pipeline:

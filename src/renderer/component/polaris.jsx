@@ -15,12 +15,6 @@ class Polaris extends React.Component {
   /**
    * Render the polaris component.
    *
-   * @todo:
-   *   - Show home dashboard if exists.
-   *   - Show dashboard list if dashboards exist.
-   *   - Show visualisation list if visualisations exist.
-   *   - Show zero state with shortcut to create visualisation.
-   *
    * @returns {React.Component} The core component.
    */
   render() {

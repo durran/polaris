@@ -1,15 +1,11 @@
 const React = require('react');
+const PolarisToolbarTab = require('./polaris-toolbar-tab');
 const Actions = require('../action');
 
 /**
  * The style constant.
  */
 const TOOLBAR = 'polaris-toolbar';
-
-/**
- * The tab constant.
- */
-const TAB = 'polaris-toolbar-tab';
 
 /**
  * The Polaris toolbar component.
@@ -69,28 +65,6 @@ class PolarisToolbar extends React.Component {
   }
 
   /**
-   * Determine if a tab is active.
-   *
-   * @param {String} tab - The tab name.
-   *
-   * @returns {Boolean} If the tab is active.
-   */
-  isActive(tab) {
-    return this.state.active === tab;
-  }
-
-  /**
-   * Get the class name for the tab.
-   *
-   * @param {String} tab - The tab name.
-   *
-   * @returns {String} The tab class.
-   */
-  tabClass(tab) {
-    return this.isActive(tab) ? `${TAB} ${TAB}-is-active` : TAB;
-  }
-
-  /**
    * Render the polaris toolbar component.
    *
    * @returns {React.Component} The core component.
@@ -100,15 +74,18 @@ class PolarisToolbar extends React.Component {
     return (
       <div id={TOOLBAR} className={TOOLBAR}>
         <ol>
-          <li onClick={this.gotoHome} className={this.tabClass(text.home)}>
-            {text.home}
-          </li>
-          <li onClick={this.gotoDashboards} className={this.tabClass(text.dashboards)}>
-            {text.dashboards}
-          </li>
-          <li onClick={this.gotoVisualisations} className={this.tabClass(text.visualisations)}>
-            {text.visualisations}
-          </li>
+          <PolarisToolbarTab
+            clickHandler={this.gotoHome}
+            label={text.home}
+            active={this.state.active} />
+          <PolarisToolbarTab
+            clickHandler={this.gotoDashboards}
+            label={text.dashboards}
+            active={this.state.active} />
+          <PolarisToolbarTab
+            clickHandler={this.gotoVisualisations}
+            label={text.visualisations}
+            active={this.state.active} />
         </ol>
       </div>
     );
