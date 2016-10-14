@@ -1,6 +1,29 @@
 .polaris-toolbar {
 
-  ol {
+  height: 25px;
+  width: 100%;
+  background-color: whitesmoke;
+
+  &-tab {
+    float: left;
+    text-transform: uppercase;
+    color: #999999;
+    padding-top: 4px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+
+    &-is-active {
+      color: #333333;
+    }
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  ul {
     list-style: none;
     margin: 0px;
     padding: 0px;

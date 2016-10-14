@@ -11,6 +11,6 @@ src/connect/static-connect.html
 report.json
 .user-data/
 .compiled-sources/
-src/app/compiled-less/
+src/renderer/.compiled-less/*
 expansions.yml
 .nvmrc

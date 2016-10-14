@@ -73,7 +73,7 @@ class PolarisToolbar extends React.Component {
     const text = global.t.polaris.toolbar;
     return (
       <div id={TOOLBAR} className={TOOLBAR}>
-        <ol>
+        <ul>
           <PolarisToolbarTab
             handler={this.gotoHome}
             label={text.home}
@@ -86,7 +86,7 @@ class PolarisToolbar extends React.Component {
             handler={this.gotoVisualisations}
             label={text.visualisations}
             active={this.state.active} />
-        </ol>
+        </ul>
       </div>
     );
   }
