@@ -39,7 +39,7 @@ class PolarisToolbarTab extends React.Component {
    */
   render() {
     return (
-      <li onClick={this.props.clickHandler} className={this.tabClass(this.props.label)}>
+      <li onClick={this.props.handler} className={this.tabClass(this.props.label)}>
         {this.props.label}
       </li>
     );

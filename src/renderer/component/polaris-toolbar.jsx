@@ -75,15 +75,15 @@ class PolarisToolbar extends React.Component {
       <div id={TOOLBAR} className={TOOLBAR}>
         <ol>
           <PolarisToolbarTab
-            clickHandler={this.gotoHome}
+            handler={this.gotoHome}
             label={text.home}
             active={this.state.active} />
           <PolarisToolbarTab
-            clickHandler={this.gotoDashboards}
+            handler={this.gotoDashboards}
             label={text.dashboards}
             active={this.state.active} />
           <PolarisToolbarTab
-            clickHandler={this.gotoVisualisations}
+            handler={this.gotoVisualisations}
             label={text.visualisations}
             active={this.state.active} />
         </ol>
