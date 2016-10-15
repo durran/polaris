@@ -1,22 +1,22 @@
-// const PolarisStore = require('polaris').PolarisStore;
+const VisualisationList = require('./lib/component/visualisation-list');
 
 /**
  * The visualisation list component name.
  */
-const VISUALISATION_LIST = 'Visualisation.List';
+const VISUALISATION_LIST = 'Visualisation.VisualisationList';
 
 /**
  * Activate all the components in the package.
  */
 const activate = () => {
-  // PolarisStore.registry.registerComponent(VISUALISATION_LIST, VisualisationList);
+  global.store.registry.registerComponent(VISUALISATION_LIST, VisualisationList);
 }
 
 /**
  * Deactivate all the components in the package.
  */
 const deactivate = () => {
-  // PolarisStore.registry.deregisterComponent(VISUALISATION_LIST);
+  global.store.registry.deregisterComponent(VISUALISATION_LIST);
 }
 
 module.exports.activate = activate;

@@ -4,8 +4,9 @@ const path = require('path');
 const React = require('react');
 const ReactDOM = require('react-dom');
 const StyleManager = require('hadron-style-manager');
-const I18n = require('./i18n');
+const Actions = require('hadron-package-manager').Action;
 const Polaris = require('./component/polaris');
+const I18n = require('./i18n');
 const PolarisStore = require('./store/polaris-store');
 
 /**
@@ -35,7 +36,10 @@ const ROOT_STYLESHEET = path.join(__dirname, 'styles', 'index.less');
 const i18n = new I18n();
 i18n.load(EN_UK, () => {
   global.t = i18n.get(EN_UK);
+  global.store = PolarisStore;
+  Actions.packageActivationCompleted.listen(() => {
+    new StyleManager(LESS_CACHE, __dirname).use(document, ROOT_STYLESHEET);
+    ReactDOM.render(React.createElement(Polaris), document.getElementById(APPLICATION));
+  });
   PolarisStore.packageManager.activate();
-  new StyleManager(LESS_CACHE, __dirname).use(document, ROOT_STYLESHEET);
-  ReactDOM.render(React.createElement(Polaris), document.getElementById(APPLICATION));
 });
