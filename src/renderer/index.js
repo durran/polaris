@@ -5,8 +5,8 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const StyleManager = require('hadron-style-manager');
 const Actions = require('hadron-package-manager').Action;
+const I18n = require('hadron-i18n');
 const Polaris = require('./component/polaris');
-const I18n = require('./i18n');
 const PolarisStore = require('./store/polaris-store');
 
 /**
@@ -17,7 +17,12 @@ const APPLICATION = 'application';
 /**
  * The british english constant.
  */
-const EN_UK = 'en-uk';
+const EN_GB = 'en-GB';
+
+/**
+ * The locales directory.
+ */
+const LOCALES = path.join(__dirname, 'locales');
 
 /**
  * The directory to store the compiled less.
@@ -32,10 +37,11 @@ const ROOT_STYLESHEET = path.join(__dirname, 'styles', 'index.less');
 /**
  * Initiate the i18n module, activate the package manager
  * and then render the polaris component.
+ *
+ * @todo: Pass app.getLocale() from main process.
  */
-const i18n = new I18n();
-i18n.load(EN_UK, () => {
-  global.t = i18n.get(EN_UK);
+new I18n(EN_GB).load(LOCALES, (error, i18n) => {
+  global.t = i18n.t;
   global.store = PolarisStore;
   Actions.packageActivationCompleted.listen(() => {
     new StyleManager(LESS_CACHE, __dirname).use(document, ROOT_STYLESHEET);

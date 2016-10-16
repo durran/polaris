@@ -18,6 +18,7 @@ class VisualisationList extends React.Component {
   render() {
     return (
       <div id={VISUALISATION_LIST} className={VISUALISATION_LIST}>
+        {global.t.visualisation.list.empty}
       </div>
     );
   }

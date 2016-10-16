@@ -13,6 +13,7 @@
     "babel-register": "^6.16.3",
     "d3": "^4.2.7",
     "hadron-app-registry": "^3.1.0",
+    "hadron-i18n": "0.0.1",
     "hadron-package-manager": "^0.2.0",
     "hadron-style-manager": "0.0.1",
     "less-cache": "^0.24.0",
