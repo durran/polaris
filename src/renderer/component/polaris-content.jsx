@@ -24,7 +24,7 @@ class PolarisContent extends React.Component {
    */
   constructor(props) {
     super(props);
-    this.state = { active: global.t.polaris.toolbar.home };
+    this.state = { active: global.t.toolbar.home };
     this.visualisationList = global.store.registry.getComponent(VISUALISATION_LIST);
     this.dashboardList = null;
   }
@@ -51,20 +51,6 @@ class PolarisContent extends React.Component {
   }
 
   /**
-   * Render the content.
-   *
-   * @returns {React.Component} The core component.
-   */
-  renderContent() {
-    if (this.state.active === global.t.polaris.toolbar.home) {
-      return (<ZeroState />);
-    } else if (this.state.active === global.t.polaris.toolbar.dashboards) {
-      return (<this.dashboardList />);
-    }
-    return (<this.visualisationList />);
-  }
-
-  /**
    * Render the polaris content component.
    *
    * @returns {React.Component} The core component.
@@ -72,7 +58,7 @@ class PolarisContent extends React.Component {
   render() {
     return (
       <div id={CONTENT} className={CONTENT}>
-        {this.renderContent()}
+        <ZeroState />
       </div>
     );
   }

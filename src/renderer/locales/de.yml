@@ -1,6 +1,5 @@
-polaris:
-  toolbar:
-    home: 'Startseite'
-    dashboards: 'Dashboards'
-    visualisations: 'Visualisierungen'
-  content:
+toolbar:
+  home: 'Startseite'
+  dashboards: 'Dashboards'
+  visualisations: 'Visualisierungen'
+content:

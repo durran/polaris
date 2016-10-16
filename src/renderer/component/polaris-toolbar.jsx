@@ -19,7 +19,7 @@ class PolarisToolbar extends React.Component {
    */
   constructor(props) {
     super(props);
-    this.state = { active: global.t.polaris.toolbar.home };
+    this.state = { active: global.t.toolbar.home };
   }
 
   /**
@@ -40,21 +40,21 @@ class PolarisToolbar extends React.Component {
    * Go to the dashboards view.
    */
   gotoDashboards() {
-    Actions.gotoView(global.t.polaris.toolbar.dashboards);
+    Actions.gotoView(global.t.toolbar.dashboards);
   }
 
   /**
    * Go to the home view.
    */
   gotoHome() {
-    Actions.gotoView(global.t.polaris.toolbar.home);
+    Actions.gotoView(global.t.toolbar.home);
   }
 
   /**
    * Go to the visualisations view.
    */
   gotoVisualisations() {
-    Actions.gotoView(global.t.polaris.toolbar.visualisations);
+    Actions.gotoView(global.t.toolbar.visualisations);
   }
 
   /**
@@ -70,7 +70,7 @@ class PolarisToolbar extends React.Component {
    * @returns {React.Component} The core component.
    */
   render() {
-    const text = global.t.polaris.toolbar;
+    const text = global.t.toolbar;
     return (
       <div id={TOOLBAR} className={TOOLBAR}>
         <ul>
