@@ -1,6 +1,7 @@
 require('babel-register')({ extensions: ['.jsx'], ignore: false });
 
 const path = require('path');
+const electron = require('electron');
 const React = require('react');
 const ReactDOM = require('react-dom');
 const StyleManager = require('hadron-style-manager');
@@ -13,11 +14,6 @@ const PolarisStore = require('./store/polaris-store');
  * The root div the application is contained in.
  */
 const APPLICATION = 'application';
-
-/**
- * The british english constant.
- */
-const EN_GB = 'en-GB';
 
 /**
  * The locales directory.
@@ -37,10 +33,8 @@ const ROOT_STYLESHEET = path.join(__dirname, 'styles', 'index.less');
 /**
  * Initiate the i18n module, activate the package manager
  * and then render the polaris component.
- *
- * @todo: Pass app.getLocale() from main process.
  */
-new I18n(EN_GB).load(LOCALES, (error, i18n) => {
+new I18n(electron.remote.app.getLocale()).load(LOCALES, (error, i18n) => {
   global.t = i18n.t;
   global.store = PolarisStore;
   Actions.packageActivationCompleted.listen(() => {
