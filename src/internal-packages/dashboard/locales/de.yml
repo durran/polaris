@@ -1,0 +1,3 @@
+dashboard:
+  list:
+    empty: "Es gibt momentan keine gespeicherten Dashboards."

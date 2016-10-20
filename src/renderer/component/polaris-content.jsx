@@ -12,6 +12,11 @@ const CONTENT = 'polaris-content';
 const VISUALISATION_LIST = 'Visualisation.VisualisationList';
 
 /**
+ * The dashboard list component name.
+ */
+const DASHBOARD_LIST = 'Dashboard.DashboardList';
+
+/**
  * The Polaris content component.
  */
 class PolarisContent extends React.Component {
@@ -25,7 +30,7 @@ class PolarisContent extends React.Component {
     super(props);
     this.state = { active: global.t.toolbar.home };
     this.visualisationList = global.store.registry.getComponent(VISUALISATION_LIST);
-    this.dashboardList = null;
+    this.dashboardList = global.store.registry.getComponent(DASHBOARD_LIST);
   }
 
   /**
@@ -38,6 +43,7 @@ class PolarisContent extends React.Component {
       <div id={CONTENT} className={CONTENT}>
         <ZeroState />
         <this.visualisationList />
+        <this.dashboardList />
       </div>
     );
   }

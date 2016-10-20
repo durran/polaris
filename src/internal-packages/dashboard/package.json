@@ -1,0 +1,9 @@
+{
+  "name": "dashboard",
+  "productName": "Polaris Dashboard Package",
+  "description": "Handles Dashboards of visualisations.",
+  "version": "0.0.1",
+  "authors": "MongoDB Inc.",
+  "private": true,
+  "main": "./index.js"
+}
