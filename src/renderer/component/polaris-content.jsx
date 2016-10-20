@@ -1,6 +1,5 @@
 const React = require('react');
 const ZeroState = require('./zero-state');
-const Actions = require('../action');
 
 /**
  * The style constant.
@@ -27,27 +26,6 @@ class PolarisContent extends React.Component {
     this.state = { active: global.t.toolbar.home };
     this.visualisationList = global.store.registry.getComponent(VISUALISATION_LIST);
     this.dashboardList = null;
-  }
-
-  /**
-   * Subscribe to the actions.
-   */
-  componentDidMount() {
-    this.unsubscribeGoto = Actions.gotoView.listen(this.handleGotoView.bind(this));
-  }
-
-  /**
-   * Unsubscribe from the actions.
-   */
-  componentWillUnmount() {
-    this.unsubscribeGoto();
-  }
-
-  /**
-   * Handle a tab change.
-   */
-  handleGotoView(tab) {
-    this.setState({ active: tab });
   }
 
   /**

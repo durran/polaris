@@ -19,3 +19,18 @@ TODO:
     - Schema information
     - Command execution
   - Pipeline:
+
+Visualisation Schema:
+
+{
+  "name": String,
+  "source": {
+    "type": String,
+    "database": <Optional>String,
+    "collection: <Optional>String,
+    "pipeline": <Optional>Array
+  }
+  "visualisation": {
+    "type": String
+  }
+}
