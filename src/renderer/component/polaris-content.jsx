@@ -37,6 +37,7 @@ class PolarisContent extends React.Component {
     return (
       <div id={CONTENT} className={CONTENT}>
         <ZeroState />
+        <this.visualisationList />
       </div>
     );
   }

@@ -12,7 +12,7 @@ const ZERO_STATE = 'zero-state';
 class ZeroState extends React.Component {
 
   /**
-   * Instantiate the content component.
+   * Instantiate the zero state component.
    *
    * @param {Object} props - The properties.
    */
