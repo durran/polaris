@@ -4,6 +4,13 @@ Next Steps:
 
 - Visualisation Model
 
+- Chart models:
+  - Bubble Chart
+  - Donut Chart
+  - Sunburst
+  - Chord Diagram
+  - Area Chart
+
 - Bundled visualisations:
   - Schema anomalies
   - Schema view
