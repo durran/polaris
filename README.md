@@ -22,6 +22,7 @@ TODO:
 
 Visualisation Schema:
 
+```json
 {
   "name": String,
   "source": {
@@ -34,3 +35,4 @@ Visualisation Schema:
     "type": String
   }
 }
+```
