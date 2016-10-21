@@ -5,7 +5,7 @@
   "repository": "",
   "scripts": {
     "start": "electron ./src/main/index.js",
-    "test": "mocha --compilers js:babel-register test/support.js ./test/{**/,**/**/}*.test.{js,jsx}"
+    "test": "electron-mocha --compilers js:babel-register test/support.js ./test/{**/,**/**/}*.test.{js,jsx}"
   },
   "author": "Durran Jordan <durran@gmail.com>",
   "license": "Apache-2.0",
@@ -27,6 +27,7 @@
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.2",
     "electron": "^1.4.3",
+    "electron-mocha": "^3.1.1",
     "enzyme": "^2.4.1",
     "mocha": "^3.1.2",
     "react-addons-test-utils": "^15.3.2"

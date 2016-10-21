@@ -4,15 +4,22 @@ const chaiEnzyme = require('chai-enzyme');
 const expect = chai.expect;
 const React = require('react');
 const mount = require('enzyme').mount;
+const Application = require('../../../src/renderer/application');
 const Polaris = require('../../../src/renderer/component/polaris');
 
 chai.use(chaiEnzyme());
 
 describe('<Polaris />', () => {
-  const wrapper = mount(<Polaris />);
-  const component = wrapper.find('#polaris');
+  before((done) => {
+    new Application('en-us').start(() => {
+      this.wrapper = mount(<Polaris />);
+      this.component = wrapper.find('#polaris');
+      console.log('here');
+      done();
+    });
+  });
 
   it('includes the BEM class name', () => {
-    expect(component.hasClass('polaris')).to.equal(true);
+    expect(this.component.hasClass('polaris')).to.equal(true);
   });
 });

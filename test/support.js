@@ -18,6 +18,3 @@ Object.keys(document.defaultView).forEach((property) => {
 global.navigator = {
   userAgent: 'node.js'
 };
-
-const locale = path.join('..', 'src', 'renderer', 'locales', 'en-uk.yml');
-global.t = yaml.readSync(locale);
