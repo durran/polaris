@@ -1,5 +1,7 @@
 Next Steps:
 
+- Proper application loading with enzyme.
+
 - Visualisation Model
 
 - Bundled visualisations:
