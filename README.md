@@ -18,7 +18,7 @@ Tentative Visualisation Schema:
   "source": {
     "type": "String",
     "database": "<Optional>String",
-    "collection: "<Optional>String",
+    "collection": "<Optional>String",
     "pipeline": "<Optional>Array"
   }
   "visualisation": {
