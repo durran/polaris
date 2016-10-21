@@ -20,7 +20,7 @@ Tentative Visualisation Schema:
     "database": "<Optional>String",
     "collection": "<Optional>String",
     "pipeline": "<Optional>Array"
-  }
+  },
   "visualisation": {
     "type": "String"
   }
